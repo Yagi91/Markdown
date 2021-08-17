@@ -1,0 +1,76 @@
+@import "./Variables";
+
+// @mixin boxShadow {
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+// }
+
+.markdown {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  .container {
+    background-color: $bg-color1;
+    height: fit-content;
+    min-height: max-content;
+    padding: 10px;
+    color: $smoke;
+    overflow-wrap: break-word;
+    max-width: 620px;
+    pre,
+    code {
+      background-color: $smoke;
+      font-family: "Courier New", Courier, monospace;
+      margin: 10px;
+      color: $bg-color1;
+    }
+    a {
+      text-decoration: none;
+      color: $black;
+      background-color: $smoke;
+      padding: 1px;
+      border-radius: 3px;
+    }
+    li {
+      text-indent: -8px;
+    }
+  }
+  .form {
+    label {
+      display: block;
+      width: 40.4vw;
+    }
+    #editor {
+      outline: none;
+      padding: 2px;
+      resize: vertical;
+      overflow-y: scroll;
+      width: 40vw;
+    }
+  }
+  .sub {
+    @include shadow;
+    margin: 10 15px;
+    padding: 20px;
+    background-color: $bg-color;
+    min-height: 90vh;
+    .head {
+      color: $smoke;
+      background-color: $black;
+      text-align: center;
+      padding: 10px 0;
+      @include shadow;
+      font-size: 1.6rem;
+      font-family: $font;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  @include mediaquery;
+}

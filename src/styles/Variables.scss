@@ -1,0 +1,27 @@
+@mixin shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+$bg-color1: rgb(105, 102, 102);
+$bg-color: rgb(141, 140, 140);
+$smoke: whitesmoke;
+$black: rgb(27, 26, 26);
+$border: 2px solid;
+
+$font: Arial, Helvetica, sans-serif;
+
+@mixin mediaquery {
+  .markdown {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    .sub {
+      max-width: 70%;
+      min-height: fit-content;
+      border: $border;
+    }
+    #editor {
+      width: 70%;
+    }
+  }
+}
